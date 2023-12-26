@@ -21,14 +21,14 @@ body {
 }
 
 .center {
-  margin: -15em -1.5em;
+  margin: -15em -4.5em;
   position: absolute;
-  width: 80px;
+  width: 10.5em;
   height: 80px;
   /* top: 70px; */
   /* left: 70px; */
-  background-color: #ff69b4;
-  border-radius: 50%;
+  background-color: #f8b9d4;
+  border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
