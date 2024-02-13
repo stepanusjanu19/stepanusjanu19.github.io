@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hari Valentine</title>
+  <title>❤️ Valentine Days</title>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> 
   <style>
     body {
@@ -58,10 +59,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-  <button class="animate_animated animate_fadeInUp" id="showMessageBtn">Klik di Sini!</button>
+  <button class="animate_animated animate_fadeInUp" id="showMessageBtn">Open 🤍</button>
   <div id="valentineMessage" class="card hidden animate_animated animate_fadeInUp">
-    <h1>Selamat Hari Valentine!</h1>
-    <p>Selamat hari valentine! Hari yang penuh dengan cinta semua orang. Dan kamu adalah salah satunya!</p>
+    <h1>Happy Valentine Day 💕!</h1>
+    <p>Selamat hari valentine ❤️. Hari yang penuh dengan cinta semua orang. Dan kamu adalah salah satunya!</p>
     <button id="showAboutValentineBtn">Lanjut</button>
   </div>
   
@@ -78,7 +79,7 @@
   </div>
 
   <div id="whatsappCard" class="card hidden animate_animated animate_fadeInUp">
-    <h1>Kirim ucapan selamat hari valentine!</h1>
+    <h1>Kirim ucapan selamat hari valentine ❤️🍫</h1>
     <button id="sendWhatsAppBtn">Kirim Pesan</button>
   </div>
 
@@ -104,15 +105,15 @@
 
     document.getElementById('submitNameBtn').addEventListener('click', function() {
       var name = document.getElementById('nameInput').value;
-      alert('Selamat Hari Valentine ' + name + '!');
+      alert('Happy Valentine Day' + name + '❤️🍫');
       document.getElementById('nameInputCard').classList.add('hidden');
       document.getElementById('whatsappCard').classList.remove('hidden');
     });
 
     document.getElementById('sendWhatsAppBtn').addEventListener('click', function() {
       var name = document.getElementById('nameInput').value;
-      var message = encodeURIComponent('Selamat hari valentine!\n' + 'Coba website valentine yang saya gunakan di : \nhttps://weply.my.id/valentine\n' + 'Saya telah mencoba website ini dengan menggunakan nama ' + name);
-      var phoneNumber = ''; // Ganti dengan nomor WhatsApp yang ingin Anda tuju
+      var message = encodeURIComponent('Selamat hari valentine <3 \n dari \n' + name + '\nLove you more sayang ku <3 :D');
+      var phoneNumber = '+6281288960198'; // Ganti dengan nomor WhatsApp yang ingin Anda tuju
       var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + message;
       window.open(whatsappURL);
     });
