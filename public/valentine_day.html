@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hari Valentine</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fce4ec;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: #ff5252;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff1744;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 20px auto;
+      text-align: center; /* Rata kiri */
+    }
+
+    .card h1 {
+      color: #ff1744;
+    }
+
+    .card p {
+      color: #333;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+  <button class="animate_animated animate_fadeInUp" id="showMessageBtn">Klik di Sini!</button>
+  <div id="valentineMessage" class="card hidden animate_animated animate_fadeInUp">
+    <h1>Selamat Hari Valentine!</h1>
+    <p>Selamat hari valentine! Hari yang penuh dengan cinta semua orang. Dan kamu adalah salah satunya!</p>
+    <button id="showAboutValentineBtn">Lanjut</button>
+  </div>
+  
+  <div id="aboutValentine" class="card hidden animate_animated animate_fadeInUp">
+    <h1>Tentang Hari Valentine</h1>
+    <p>Hari Valentine, juga disebut Hari Santo Valentinus atau Perayaan Santo Valentinus, dirayakan setiap tahun pada tanggal 14 Februari. Ini berasal sebagai hari perayaan Kristen yang menghormati satu atau dua martir Kristen awal bernama Santo Valentinus dan, melalui tradisi rakyat kemudian, telah menjadi perayaan budaya, agama, dan komersial yang signifikan tentang asmara dan cinta di banyak wilayah dunia.</p>
+    <button id="continueBtn">Lanjut</button>
+  </div>
+
+  <div id="nameInputCard" class="card hidden animate_animated animate_fadeInUp">
+    <h1>Masukkan Nama Anda</h1>
+    <input style="border-radius:15px;width:80%;height:30px;text-align:center" type="text" id="nameInput" placeholder="Nama" required><br><br>
+    <button id="submitNameBtn" type="submit">Submit</button>
+  </div>
+
+  <div id="whatsappCard" class="card hidden animate_animated animate_fadeInUp">
+    <h1>Kirim ucapan selamat hari valentine!</h1>
+    <button id="sendWhatsAppBtn">Kirim Pesan</button>
+  </div>
+
+  <audio id="valentineMusic" src="https://pouch.jumpshare.com/preview/4MvByPWW-ZoCZrM58GFj3A5s0GA8kMTlwh9uddo8_--eMhs0a310TelB840Sf8vk4csXfPkp4-E82z18WONP4UXTbvlGKU6L1THulsTcSPjNTLaFs-gVE1CUvTyjUHxVSFn9NXQ0y6X1WiWsOwuWFaN_fIMI2zJarj0avEcXWfs.mp3" autoplay loop class="hidden"></audio>
+
+  <script>
+    document.getElementById('showMessageBtn').addEventListener('click', function() {
+      document.getElementById('valentineMessage').classList.remove('hidden');
+      document.getElementById('showMessageBtn').style.display = 'none';
+      document.getElementById('valentineMusic').classList.remove('hidden');
+    });
+
+    document.getElementById('showAboutValentineBtn').addEventListener('click', function() {
+      document.getElementById('aboutValentine').classList.remove('hidden');
+      document.getElementById('valentineMessage').classList.add('hidden');
+      document.getElementById('showAboutValentineBtn').style.display = 'none';
+    });
+
+    document.getElementById('continueBtn').addEventListener('click', function() {
+      document.getElementById('aboutValentine').classList.add('hidden');
+      document.getElementById('nameInputCard').classList.remove('hidden');
+    });
+
+    document.getElementById('submitNameBtn').addEventListener('click', function() {
+      var name = document.getElementById('nameInput').value;
+      alert('Selamat Hari Valentine ' + name + '!');
+      document.getElementById('nameInputCard').classList.add('hidden');
+      document.getElementById('whatsappCard').classList.remove('hidden');
+    });
+
+    document.getElementById('sendWhatsAppBtn').addEventListener('click', function() {
+      var name = document.getElementById('nameInput').value;
+      var message = encodeURIComponent('Selamat hari valentine!\n' + 'Coba website valentine yang saya gunakan di : \nhttps://weply.my.id/valentine\n' + 'Saya telah mencoba website ini dengan menggunakan nama ' + name);
+      var phoneNumber = ''; // Ganti dengan nomor WhatsApp yang ingin Anda tuju
+      var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + message;
+      window.open(whatsappURL);
+    });
+  </script>
+</body>
+</html>
