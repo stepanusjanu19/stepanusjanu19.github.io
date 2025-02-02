@@ -1,7 +1,7 @@
 onload = () =>{
         document.body.classList.remove("container");
         const textElement = document.querySelector('.text');
-        textElement.innerText = 'Agnes Veronika 🩷';
+        textElement.innerText = 'Queensa 🩷';
         const opacity = 0;
         const intervalID = 0;
         setInterval(() => {
