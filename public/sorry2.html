@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>I'm Sorry ❤️</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <style>
+            body {
+                font-family: "Segoe UI", sans-serif;
+                background: linear-gradient(to right, #ffdde1, #ee9ca7);
+                text-align: center;
+                overflow: hidden;
+                height: 100vh;
+                margin: 0;
+            }
+
+            h1 {
+                font-size: 3em;
+                color: #d6336c;
+                margin-top: 60px;
+            }
+
+            p {
+                font-size: 1.3em;
+                color: #333;
+            }
+
+            .heart {
+                font-size: 5em;
+                color: red;
+                animation: beat 1s infinite;
+            }
+
+            @keyframes beat {
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.2);
+                }
+            }
+
+            input {
+                padding: 10px;
+                font-size: 1.2em;
+                border-radius: 8px;
+                border: 2px solid #d6336c;
+                outline: none;
+                margin: 20px 0;
+            }
+
+            .buttons {
+                margin-top: 20px;
+            }
+
+            button {
+                background: #d6336c;
+                color: white;
+                border: none;
+                padding: 15px 30px;
+                font-size: 1.2em;
+                border-radius: 12px;
+                cursor: pointer;
+                margin: 10px;
+                transition: 0.3s;
+                position: relative;
+            }
+
+            button:hover {
+                background: #a61e4d;
+            }
+
+            /* Falling hearts */
+            .falling-heart {
+                position: fixed;
+                top: -10px;
+                color: red;
+                font-size: 20px;
+                animation: fall linear forwards;
+            }
+
+            @keyframes fall {
+                from {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateY(100vh);
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <audio id="audio" src="assets/love-story-156946.mp3"></audio>
+        <h1>I'm really sorry 💔</h1>
+        <div class="heart">❤️</div>
+        <p>Please forgive me, my love.</p>
+
+        <input id="nameInput" type="text" placeholder="Enter your name ❤️" />
+
+        <div class="buttons">
+            <button id="yesBtn">Yes 💕</button>
+            <button id="noBtn">No 😢</button>
+        </div>
+
+        <script>
+            const yesBtn = document.getElementById("yesBtn");
+            const noBtn = document.getElementById("noBtn");
+            const nameInput = document.getElementById("nameInput");
+            const bgMusic = document.getElementById("audio");
+
+            // Play music after first interaction (browser policy)
+            window.addEventListener("load", () => {
+                bgMusic.play().catch(() => {
+                    const resume = () => {
+                        bgMusic.play().catch(() => {});
+                        document.removeEventListener("click", resume);
+                        document.removeEventListener("keydown", resume);
+                    };
+                    document.addEventListener("click", resume);
+                    document.addEventListener("keydown", resume);
+                });
+            });
+
+            // Yes button with SweetAlert
+            yesBtn.addEventListener("click", () => {
+                const name = nameInput.value || "Love";
+                Swal.fire({
+                    title: `Thank you, ${name}! 😘❤️`,
+                    text: "You forgave me, and I love you forever 💕",
+                    icon: "success",
+                    confirmButtonText: "Love you too 💖",
+                    background: "#fff0f5",
+                    color: "#d6336c",
+                    confirmButtonColor: "#d6336c",
+                    backdrop: `
+                        rgba(0,0,123,0.4)
+                        url("https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif")
+                        left top
+                        no-repeat
+                    `,
+                });
+            });
+
+            // No button runs away
+            noBtn.addEventListener("mouseover", () => {
+                const x = Math.random() * (window.innerWidth - 100);
+                const y = Math.random() * (window.innerHeight - 50);
+                noBtn.style.position = "absolute";
+                noBtn.style.left = x + "px";
+                noBtn.style.top = y + "px";
+            });
+
+            // Falling hearts animation
+            function createHeart() {
+                const heart = document.createElement("div");
+                heart.className = "falling-heart";
+                heart.innerHTML = "❤️";
+                heart.style.left = Math.random() * window.innerWidth + "px";
+                heart.style.fontSize = 20 + Math.random() * 30 + "px";
+                heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+            }
+
+            setInterval(createHeart, 500);
+        </script>
+    </body>
+</html>
