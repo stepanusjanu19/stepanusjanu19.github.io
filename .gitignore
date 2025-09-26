@@ -1,2 +1,6 @@
 dist/
 .idx/
+node_modules
+github_conf
+package-lock.json
+package.json

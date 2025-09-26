@@ -1,14 +1,45 @@
-
 document.getElementById("kadoIn").onclick = function() {if(fungsiAwal==0){audio.play();fungsiAwal=1;kadoIn.style="transition:all .8s ease;transform:scale(10);opacity:0";wallpaper.style="transform: scale(1.5);";ket.style="display:none";setTimeout(mulainama,700)}}
   
   async function mulainama() {
-           kadoIn.style="display:none";ket.style="display:none";
-           Content.style = "opacity:1;margin-top:2vh";
-           bodyblur.style="opacity:.7";
-           wallpaper.style="transform: scale(1);";
-           fotostiker.style="display:inline-flex;";
-           setTimeout(ftmuncul,200);
-           setTimeout(kethalo,500);
+          Swal.fire({
+            title: 'Masukkan Nama Kamu ❤️',
+            input: 'text',
+            inputPlaceholder: 'Tolong diisi ya namanya',
+            showCancelButton: true,
+            confirmButtonText: 'Lanjut!',
+            cancelButtonText: 'Batal',
+            inputValidator: (value) => {
+                if (!value) {
+                    return 'Nama tidak boleh kosong!';
+                }
+                const forbidden = /<|>|script|onerror|onload|javascript:/i;
+                if (forbidden.test(value)) {
+                    return 'Input mengandung karakter tidak diizinkan!';
+                }
+                const nameOnly = /^[A-Za-z\s]+$/;
+                if (!nameOnly.test(value)) {
+                    return 'Nama hanya boleh berisi huruf dan spasi!';
+                }
+                return null;
+            }
+        }).then((result) => {
+            if (result.isConfirmed && result.value) {
+                encoded = encodeBase64Unicode(result.value.trim());
+                if (encoded) {
+                    decodedName = decodeBase64Unicode(encoded);
+                    vketikhalo = `Hi ${decodedName} sayang ❤️`;
+                    if (decodedName) {
+                      kadoIn.style="display:none";ket.style="display:none";
+                      Content.style = "opacity:1;margin-top:2vh";
+                      bodyblur.style="opacity:.7";
+                      wallpaper.style="transform: scale(1);";
+                      fotostiker.style="display:inline-flex;";
+                      setTimeout(ftmuncul,200);
+                      setTimeout(kethalo,500);
+                    }
+                }
+            }
+        });
   }
   
   function ftmuncul(){
@@ -133,3 +164,37 @@ document.getElementById("kadoIn").onclick = function() {if(fungsiAwal==0){audio.
     opsLcheck=5;opsLclick=1;
   },}).go();
   }
+
+
+
+
+
+
+
+
+//tags => onload set value on variable vketikhalo encoding name
+
+function decodeBase64Unicode(str) {
+    try {
+        return decodeURIComponent(
+            atob(str)
+                .split('')
+                .map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+                .join('')
+        );
+    } catch (e) {
+        return null;
+    }
+}
+
+function encodeBase64Unicode(str) {
+    try {
+        return btoa(
+            encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (match, p1) =>
+                String.fromCharCode('0x' + p1)
+            )
+        );
+    } catch (e) {
+        return null;
+    }
+}
