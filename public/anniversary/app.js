@@ -108,21 +108,21 @@
   // 4. PHOTO GALLERY
   // ─────────────────────────────────────────
   const photos = [
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21.jpeg', cap: 'Momen Indah 💖' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (1).jpeg', cap: 'Bersama Kamu 🌸' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (2).jpeg', cap: 'Kenangan Pertama ✨' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (3).jpeg', cap: 'Senyummu 😊' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (4).jpeg', cap: 'Dunia kita 💕' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (5).jpeg', cap: 'Cerita Kita 💝' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (6).jpeg', cap: 'Petualangan 🌹' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (7).jpeg', cap: 'Tawa Kita 😂' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (8).jpeg', cap: 'Favoritku 💗' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (9).jpeg', cap: 'Momen Spesial 🌺' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (10).jpeg', cap: 'Selalu Bersama 🌟' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (11).jpeg', cap: 'Di Sisimu 💞' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (12).jpeg', cap: 'Cahayaku ⭐' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (13).jpeg', cap: 'Satu Tahun 🎊' },
-    { src: 'anniversary/photos/WhatsApp Image 2026-04-03 at 16.38.21 (14).jpeg', cap: 'Happy Anniversary 🎉' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21.jpeg', cap: 'Momen Indah 💖' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (1).jpeg', cap: 'Bersama Kamu 🌸' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (2).jpeg', cap: 'Kenangan Pertama ✨' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (3).jpeg', cap: 'Senyummu 😊' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (4).jpeg', cap: 'Dunia kita 💕' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (5).jpeg', cap: 'Cerita Kita 💝' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (6).jpeg', cap: 'Petualangan 🌹' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (7).jpeg', cap: 'Tawa Kita 😂' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (8).jpeg', cap: 'Favoritku 💗' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (9).jpeg', cap: 'Momen Spesial 🌺' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (10).jpeg', cap: 'Selalu Bersama 🌟' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (11).jpeg', cap: 'Di Sisimu 💞' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (12).jpeg', cap: 'Cahayaku ⭐' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (13).jpeg', cap: 'Satu Tahun 🎊' },
+    { src: 'photos/WhatsApp Image 2026-04-03 at 16.38.21 (14).jpeg', cap: 'Happy Anniversary 🎉' },
   ];
 
   const grid = document.getElementById('gallery-grid');
