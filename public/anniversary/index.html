@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 1st Anniversary — Resdina Sinaga 💖</title>
+  <meta name="description"
+    content="Satu tahun perjalanan cinta yang indah bersama Resdina Sinaga. Happy 1st Anniversary!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@500;700&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="anniversary/style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════ FLOATING PARTICLES ══════════════ -->
+  <div id="particles-container" aria-hidden="true"></div>
+
+  <!-- ══════════════ ROMANTIC MUSIC ══════════════ -->
+  <!-- Chopin Nocturne Op.32 No.1 — Public Domain (Wikimedia Commons) -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="anniversary/music/romantic.ogg" type="audio/ogg" />
+    <source src="anniversary/music/romantic.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Floating music player -->
+  <div id="music-player" aria-label="Romantic background music">
+    <button id="music-btn" aria-label="Play romantic music" title="Play / Pause music">
+      <div class="vinyl" id="vinyl-disc">
+        <div class="vinyl-center">♫</div>
+      </div>
+    </button>
+    <div class="music-info" id="music-info">
+      <span class="music-title">Chopin Nocturne</span>
+      <span class="music-hint">for Resdina 💖</span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════ SURPRISE OVERLAY ══════════════ -->
+  <div id="surprise-overlay">
+    <div id="surprise-box">
+      <div id="envelope-wrap">
+        <div class="envelope" id="envelope">
+          <div class="envelope-lid" id="env-lid"></div>
+          <div class="envelope-body">
+            <div class="heart-seal">💌</div>
+          </div>
+        </div>
+      </div>
+      <p class="hint-text">Tap to open your surprise 💖</p>
+    </div>
+  </div>
+
+  <!-- ══════════════ MAIN WRAPPER ══════════════ -->
+  <main id="main-content" class="hidden">
+
+    <!-- ── HERO ── -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-bg-blur"></div>
+      <div class="hero-content">
+        <div class="badge fade-in-up">✨ 1 Year Together ✨</div>
+        <h1 class="hero-title fade-in-up delay-1">
+          Happy<br />
+          <em>Anniversary</em>
+        </h1>
+        <p class="hero-name fade-in-up delay-2">Resdina Sinaga</p>
+        <p class="hero-sub fade-in-up delay-3">Satu tahun yang penuh cinta, tawa, dan kenangan indah bersama si dia 🌸
+        </p>
+        <div class="hero-hearts fade-in-up delay-4">💗 · 💕 · 💗</div>
+        <div class="counter-wrap fade-in-up delay-5">
+          <div class="counter-card">
+            <span class="counter-num" id="cnt-days">—</span>
+            <span class="counter-lbl">Hari</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num" id="cnt-hrs">—</span>
+            <span class="counter-lbl">Jam</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num" id="cnt-min">—</span>
+            <span class="counter-lbl">Menit</span>
+          </div>
+          <div class="counter-card">
+            <span class="counter-num" id="cnt-sec">—</span>
+            <span class="counter-lbl">Detik</span>
+          </div>
+        </div>
+        <a href="#gallery" class="hero-cta fade-in-up delay-6">Lihat Kenangan Kita ↓</a>
+      </div>
+      <div class="scroll-indicator fade-in-up delay-6" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </section>
+
+    <!-- ── LOVE MESSAGE ── -->
+    <section id="message" class="section message-section">
+      <div class="section-inner">
+        <span class="section-tag">Untuk Kamu 💌</span>
+        <h2 class="section-title">Sepucuk Surat Cinta</h2>
+        <div class="letter-card reveal">
+          <p class="letter-line">Sayang,</p>
+          <p>
+            Tepat satu tahun yang lalu, hidupku berubah selamanya — saat aku pertama kali
+            menatap matamu dan tahu bahwa kamu adalah seseorang yang kusebut <em>rumah</em>.
+          </p>
+          <p>
+            Satu tahun bukan waktu yang singkat. Di dalamnya ada ribuan momen kecil yang
+            membuatku jatuh cinta lagi dan lagi; dari cara kamu tertawa, cara kamu peduli,
+            hingga keberanianmu yang menginspirasiku setiap harinya.
+          </p>
+          <p>
+            Terima kasih sudah ada, sudah bertahan, dan sudah memilihku setiap harinya.
+            Kamu bukan hanya kekasihku — kamu adalah sahabat terbaikku.
+          </p>
+          <p>
+            Aku tidak tahu apa yang menanti kita di depan, tapi aku tahu satu hal pasti:
+            <strong>Aku ingin melewati semuanya bersamamu.</strong>
+          </p>
+          <p class="letter-close">Selalu mencintaimu, <span class="letter-sig">— Dari Yang Selalu Merindukanmu 🌹</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PHOTO GALLERY ── -->
+    <section id="gallery" class="section gallery-section">
+      <div class="section-inner">
+        <span class="section-tag">Kenangan Indah 📸</span>
+        <h2 class="section-title">Galeri Kita</h2>
+        <p class="section-desc">Setiap foto adalah cerita, setiap momen adalah keajaiban.</p>
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TIMELINE ── -->
+    <section id="timeline" class="section timeline-section">
+      <div class="section-inner">
+        <span class="section-tag">Perjalanan Kita 💫</span>
+        <h2 class="section-title">Satu Tahun Bersama</h2>
+        <div class="timeline">
+          <div class="tl-item reveal tl-left">
+            <div class="tl-dot">🌱</div>
+            <div class="tl-card">
+              <span class="tl-date">03 April 2025</span>
+              <h3>Pertemuan Pertama</h3>
+              <p>Saat dunia mempertemukan kita, seolah alam semesta telah merencanakan segalanya.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal tl-right">
+            <div class="tl-dot">🌸</div>
+            <div class="tl-card">
+              <span class="tl-date">Mei 2025</span>
+              <h3>Jatuh Cinta</h3>
+              <p>Setiap pesan, setiap panggilan — aku menyadari aku tidak bisa membayangkan hari tanpamu.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal tl-left">
+            <div class="tl-dot">☀️</div>
+            <div class="tl-card">
+              <span class="tl-date">Juli – September 2025</span>
+              <h3>Tumbuh Bersama</h3>
+              <p>Kamu hadir di setiap momen penting, di setiap tawa dan air mata — selalu ada untukku.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal tl-right">
+            <div class="tl-dot">🍂</div>
+            <div class="tl-card">
+              <span class="tl-date">Oktober – Maret 2026</span>
+              <h3>Melewati Badai</h3>
+              <p>Kita membuktikan bahwa cinta yang nyata bukan tentang tidak pernah bertengkar — tapi tentang selalu
+                kembali.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal tl-left">
+            <div class="tl-dot">🎉</div>
+            <div class="tl-card">
+              <span class="tl-date">03 April 2026 — Hari Ini ✨</span>
+              <h3>Satu Tahun Penuh Cinta</h3>
+              <p>Dan kini, setelah satu tahun, cintaku untukmu hanya semakin dalam. Happy Anniversary, Resdina! 💖</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── REASONS ── -->
+    <section id="reasons" class="section reasons-section">
+      <div class="section-inner">
+        <span class="section-tag">Mengapa Kamu? 💝</span>
+        <h2 class="section-title">Alasan Aku Mencintaimu</h2>
+        <div class="reasons-grid">
+          <div class="reason-card reveal">
+            <div class="reason-icon">😊</div>
+            <h3>Senyummu</h3>
+            <p>Senyummu adalah hal pertama yang kubayangkan saat hari terasa berat.</p>
+          </div>
+          <div class="reason-card reveal">
+            <div class="reason-icon">🧠</div>
+            <h3>Kecerdasanmu</h3>
+            <p>Cara berpikirmu selalu membuatku terkagum-kagum dan belajar hal baru setiap harinya.</p>
+          </div>
+          <div class="reason-card reveal">
+            <div class="reason-icon">💪</div>
+            <h3>Ketangguhanmu</h3>
+            <p>Kamu kuat bahkan ketika dunia terasa menghimpit — itu menginspirasi aku setiap saat.</p>
+          </div>
+          <div class="reason-card reveal">
+            <div class="reason-icon">🤣</div>
+            <h3>Tawamu</h3>
+            <p>Tawamu adalah musik terbaik yang pernah kudengar, dan aku tidak pernah bosan mendengarnya.</p>
+          </div>
+          <div class="reason-card reveal">
+            <div class="reason-icon">🫂</div>
+            <h3>Perhatianmu</h3>
+            <p>Kamu selalu ingat hal-hal kecil yang penting bagiku — itu membuatku merasa begitu dicintai.</p>
+          </div>
+          <div class="reason-card reveal">
+            <div class="reason-icon">🌙</div>
+            <h3>Segalamu</h3>
+            <p>Pada akhirnya, aku mencintaimu bukan karena satu alasan — tapi karena kamu adalah kamu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FINAL WISH ── -->
+    <section id="wish" class="section wish-section">
+      <div class="wish-bg"></div>
+      <div class="section-inner wish-inner">
+        <div class="wish-ring">💍</div>
+        <h2 class="wish-title reveal">Happy 1st Anniversary</h2>
+        <p class="wish-name reveal">Resdina Sinaga</p>
+        <p class="wish-poem reveal">
+          "Semoga setiap tahun yang kita lewati bersama<br />
+          menjadi cerita yang ingin kita kenang selamanya.<br />
+          Satu tahun sudah — dan aku ingin semua tahun sesudahnya<br />
+          tetap bersamamu. 🌹"
+        </p>
+        <div class="balloons-wrap" aria-hidden="true" id="balloons"></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>Made with 💖 — for the most amazing person in my universe</p>
+      <p><em>Resdina Sinaga · 1 Year · Forever & Always</em></p>
+    </footer>
+  </main>
+
+  <!-- ══════════════ LIGHTBOX ══════════════ -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button id="lb-close" aria-label="Close">✕</button>
+    <button id="lb-prev" aria-label="Previous photo">‹</button>
+    <img id="lb-img" src="" alt="Gallery photo" />
+    <span id="lb-caption"></span>
+    <button id="lb-next" aria-label="Next photo">›</button>
+  </div>
+
+  <script src="anniversary/app.js"></script>
+</body>
+
+</html>
